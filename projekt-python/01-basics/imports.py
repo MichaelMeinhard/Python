@@ -75,6 +75,11 @@ Použijte vhodné moduly v Pythonu (včetně jejich případné instalace) k tom
 K řešení prvního úkolu je možné doporučit importovat interní modul datetime
 Řešení dalších dvou úkolů můžete odvodit z příkladů v dokumentaci k externímu modulu dateutil - viz https://pypi.org/project/python-dateutil/
 """
-from DateTime import DateTime
-nowDate = DateTime()
-print(nowDate)
+from datetime import *
+from dateutil.easter import *
+now = datetime.now()
+print(now)
+print(eve)
+for i in range(2023,2028):
+    print("Velikonoční neděle roku:",i,"je",easter(i))
+
