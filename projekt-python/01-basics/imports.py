@@ -76,10 +76,13 @@ K řešení prvního úkolu je možné doporučit importovat interní modul date
 Řešení dalších dvou úkolů můžete odvodit z příkladů v dokumentaci k externímu modulu dateutil - viz https://pypi.org/project/python-dateutil/
 """
 from datetime import *
+from dateutil.rrule import *
 from dateutil.easter import *
+from dateutil.relativedelta import *
 now = datetime.now()
-print(now)
-print(eve)
+print("Dnešní datum a čas: ",now)
 for i in range(2023,2028):
     print("Velikonoční neděle roku:",i,"je",easter(i))
+thisYear = now.year
 
+print(rrule(YEARLY, dtstart=now, bymonth=12, bymonthday=24, byweekday=SU)[0].year)
