@@ -158,3 +158,17 @@ funkční kód, tím lepší).
 3. Vytvořte funkci, která vygeneruje náhodná hesla pro počet osob zadaný v parametru tak, aby heslo začínalo
    3 velkými písmeny, pokračovalo 3 malými písmeny, jedním speciálním znakem (-/+*) a končilo 3 náhodnými číslicemi.
 '''
+def datum():
+    print("Zadej datum ve tvaru: den. mesic. rok")
+    datum = input()
+    x = datum.split(". ")
+    return print(f"{x[2]}-{x[1]}-{x[0]}")
+# datum()
+
+from camelcase import CamelCase
+
+def promena():
+    print("Napis vetu")
+    veta = input()
+    return print(CamelCase('veta'))
+promena()
