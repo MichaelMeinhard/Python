@@ -21,4 +21,3 @@ Samozřejmě můžete své řešení rozšířit i o jiné fyzikální konstanty
 připravených funkcí.  
 '''
 
-d
