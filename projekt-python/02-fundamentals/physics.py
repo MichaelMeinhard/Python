@@ -21,30 +21,3 @@ Samozřejmě můžete své řešení rozšířit i o jiné fyzikální konstanty
 připravených funkcí.  
 '''
 
-def tihaZeme(hmotnost, earthG):
-    '''
-    zadame hmotnost v kg
-    vrati tihovou silu zeme
-    '''
-    return hmotnost * earthG
-
-def tihaMesice(hmotnost, moonG):
-    '''
-    zadame hmotnost v kg
-    vrati tihovou silu mesice
-    '''
-    return hmotnost * moonG
-
-def casSvetlo(cas, svetlo):
-    '''
-    dame vzdalenost v km
-    dostaneme cas v sekundach
-    '''
-    return (cas * 1000) / svetlo
-
-def casZvuk(cas, zvuk):
-    '''
-    dame vzdalenost v km
-    dostaneme cas v sekundach
-    '''
-    return (cas * 1000) / zvuk

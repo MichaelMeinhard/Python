@@ -152,7 +152,7 @@ funkční kód, tím lepší).
 1. Převeďte "česky" zadané datum - např. 12. 10. 2020 - do podoby "databázové" podoby - např. 2020-10-12
 2. Vytvořte funkci, která vyrobí ze zadaného sousloví:
    a) identifikátor pro proměnné používané v Pythonu - např. To je proměnná v Pythonu = to_je_promenna_v_pythonu
-   b) identifikátor pro camel syntax v JS - např. To je proměnná v Pythonu = ToJePromennaVPythonu 
+   b) identifikátor pro camel syntax v JS - např. To je proměnná v Pythonu = toJePromennaVPythonu 
    Obě možnosti by měly být vyřešeny v jedné funkci s využitím parametrů.
    Kdo si chce úkol trochu zjednodušit, nemusí řešit znaky s českou diakritikou. 
 3. Vytvořte funkci, která vygeneruje náhodná hesla pro počet osob zadaný v parametru tak, aby heslo začínalo
@@ -163,39 +163,12 @@ def datum():
     datum = input()
     x = datum.split(". ")
     return print(f"{x[2]}-{x[1]}-{x[0]}")
-datum()
+# datum()
 
-import camelcase
-import snakecase
-c = camelcase.CamelCase()
+from camelcase import CamelCase
 
 def promena():
-    veta = 'to je promenna v pythonu'
-    cveta = c.hump(veta)
-    dveta = cveta.replace(' ', '')
-    print(snakecase.convert(dveta))
-    print(dveta[0].lower() + dveta[1:])
+    print("Napis vetu")
+    veta = input()
+    return print(CamelCase('veta'))
 promena()
-
-import random
-import string
-
-
-
-def heslo(cislo):
-    x = 0
-    while x < int(cislo):
-        password = ""
-        for i in range(3):
-            password += random.choice(string.ascii_uppercase)
-        for i in range(3):
-            password += random.choice(string.ascii_lowercase)
-        password += random.choice(string.punctuation)
-        for i in range(3):
-            password += random.choice(string.digits)
-        print(password)
-        x+=1
-
-print('Zadej pocet chtenych hesel: ')
-cislo = input()
-heslo(cislo)
