@@ -13,4 +13,6 @@ def write_txtfile(filename, text):
     f.close()
     return True
 
+
+
 write_txtfile('frekvence.txt', char_frequency(read_txtfile('dictionary.py')))
