@@ -5,8 +5,8 @@ klíč (angl. key) a hodnotu (angl. value).
 Každému klíči je přiřazena jedna hodnota.
 '''
 
-# Collection which is unordered, changeable and indexed.
-# In Python dictionaries are written with curly brackets, and they have keys and values.
+# Kolekce, která je neuspořádaná, měnitelná a indexovaná.
+# V Pythonu jsou slovníky psány se složenými závorkami a mají klíče a hodnoty.
 car = {
   'brand': 'Ford',
   'model': 'Mustang',
@@ -94,3 +94,44 @@ child3          Linus               2011
 ---------------------------------------------
 Počet záznamů: 3
 '''
+
+cars = {
+  "car1": {
+    "brand":"Ford",
+    "model":"Mustang",
+    "madein":2015,
+    "colors":list(("blue", "white", "vine","lime", "black")),
+    "nationality":"America",
+    "horsepower": "430",
+    "maxspeed": "250km/h"
+  },
+  "car2": {
+    "brand":"Porsche",
+    "model":("Turbo", "Cabriolet", "S"),
+    "madein":2004,
+    "colors":list(("blue", "white", "vine", "black")),
+    "nationality":"German",
+    "horsepower": "650",
+    "maxspeed": "330km/h"
+  },
+  "car3": {
+    "brand":"Lamborghini",
+    "model":"Huracán",
+    "madein":2014,
+    "colors":list(("blue", "white","grey", "black", "yellow")),
+    "nationality":"Italy",
+    "horsepower": "602",
+    "maxspeed": "330km/h"
+  },
+}
+del cars["car3"]
+cars["car4"] = {
+    "brand":"Mazda",
+    "model":("Rx-7","FC"),
+    "madein":1986,
+    "colors":list(("blue", "white","grey", "black")),
+    "nationality":"Japan",
+    "horsepower": "185",
+    "maxspeed": "210km/h"
+}
+print(cars)
